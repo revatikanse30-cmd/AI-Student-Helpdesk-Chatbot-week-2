@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Student Helpdesk Chatbot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-icon">🎓</div>
+      <div>
+        <h1>Student Helpdesk</h1>
+        <p>AI-powered student support</p>
+      </div>
+      <span class="online"><i></i> Online</span>
+    </header>
+
+    <section class="welcome">
+      <h2>Hi there! 👋</h2>
+      <p>I'm your student helpdesk assistant. Ask me about courses, internships, deadlines, certificates, or project submissions.</p>
+      <div class="quick-actions">
+        <button type="button" data-message="Tell me about internships">Internships</button>
+        <button type="button" data-message="How do I get my certificate?">Certificates</button>
+        <button type="button" data-message="What are the project submission steps?">Project help</button>
+        <button type="button" data-message="What courses are available?">Courses</button>
+      </div>
+    </section>
+
+    <section class="chat-card" aria-label="Chat conversation">
+      <div class="chat-heading">
+        <div>
+          <h2>Chat with us</h2>
+          <p>Usually replies instantly</p>
+        </div>
+        <button id="clear-chat" class="clear-btn" type="button" title="Clear conversation">Clear</button>
+      </div>
+      <div id="chat-messages" class="messages" aria-live="polite">
+        <div class="message bot">
+          <div class="avatar">🎓</div>
+          <div class="bubble">
+            <p>Hello! I'm here to help with student-related questions. What would you like to know?</p>
+            <time>Just now</time>
+          </div>
+        </div>
+      </div>
+      <div class="typing" id="typing" hidden>Assistant is preparing a reply…</div>
+      <form id="chat-form" class="composer">
+        <label class="sr-only" for="user-input">Type your message</label>
+        <input id="user-input" type="text" placeholder="Type your question here..." autocomplete="off" maxlength="500" required />
+        <button type="submit" aria-label="Send message">➤</button>
+      </form>
+      <p class="disclaimer">Demo chatbot • Uses predefined responses and keyword-based intent recognition.</p>
+    </section>
+    <footer>Built for Artificial Intelligence — Week 2</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
